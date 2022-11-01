@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <h3>Mảng lưu trữ số nguyên</h3>
+
+            <form class="content">
+                <label for="b00-so-n">Nhập số nguyên:</label>
+                <input type="number" id="b00-so-n" placeholder="Nhập số nguyên" pattern="[0-9]">
+
+                <button type="submit" class="btn btn-outline-success" id="btn_b00">Thêm vào mảng</button>
+                <span>
+                    <button type="button" class="btn btn-outline-danger" id="btn_clear">Xóa mảng</button>
+                </span>
+            </form>
+
+            <div class="result">
+                <p>Mảng số nguyên: <span id="value-rs0"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Chức năng 01: Tổng các số dương trong mảng</h3>
+
+            <form class="content">
+                <button type="submit" class="btn btn-outline-success" id="btn_b01">Tổng số dương</button>
+            </form>
+
+            <div class="result">
+                <p>Kết quả: <span id="value-rs1"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Chức năng 02: Đếm số dương trong mảng</h3>
+
+            <form class="content">
+                <button type="submit" class="btn btn-outline-success" id="btn_b02">Số số dương</button>
+            </form>
+
+            <div class="result">
+                <p>Kết quả: <span id="value-rs2"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Chức năng 03: Tìm số nhỏ nhất trong mảng</h3>
+
+            <form class="content">
+                <button type="submit" class="btn btn-outline-success" id="btn_b03">Số nhỏ nhất</button>
+            </form>
+
+            <div class="result">
+                <p>Kết quả: <span id="value-rs3"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Chức năng 04: Tìm số dương nhỏ nhất trong mảng</h3>
+
+            <form class="content">
+                <button type="submit" class="btn btn-outline-success" id="btn_b04">Số dương nhỏ nhất</button>
+            </form>
+
+            <div class="result">
+                <p>Kết quả: <span id="value-rs4"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Chức năng 05: Tìm số chẵn cuối cùng trong mảng</h3>
+
+            <form class="content">
+                <button type="submit" class="btn btn-outline-success" id="btn_b05">Số chẵn cuối cùng</button>
+            </form>
+
+            <div class="result">
+                <p>Kết quả: <span id="value-rs5"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Chức năng 06: Đổi chỗ 2 giá trị trong mảng</h3>
+
+            <form class="content">
+                <label for="b06-vt-1">Nhập vị trí thứ 1:</label>
+                <input type="number" id="b06-vt-1" placeholder="Nhập số nguyên" pattern="[0-9]">
+
+                <label for="b06-vt-2">Nhập vị trí thứ 2:</label>
+                <input type="number" id="b06-vt-2" placeholder="Nhập số nguyên" pattern="[0-9]">
+
+                <button type="submit" class="btn btn-outline-success" id="btn_b06">Đổi chỗ</button>
+            </form>
+
+            <div class="result">
+                <p>Kết quả: <span id="value-rs6"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Chức năng 07: Xếp mảng tăng dần</h3>
+
+            <form class="content">
+                <button type="submit" class="btn btn-outline-success" id="btn_b07">Mảng tăng dần</button>
+            </form>
+
+            <div class="result">
+                <p>Kết quả: <span id="value-rs7"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Chức năng 08: Tìm số nguyên tố đầu tiên</h3>
+
+            <form class="content">
+                <button type="submit" class="btn btn-outline-success" id="btn_b08">Số nguyên tố đầu tiên</button>
+            </form>
+
+            <div class="result">
+                <p>Kết quả: <span id="value-rs8"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Chức năng 09: Nhập thêm mảng số thực, tìm số số nguyên</h3>
+
+            <form class="content">
+                <button type="submit" class="btn btn-outline-success" id="btn_b09">Số số nguyên</button>
+            </form>
+
+            <div class="result">
+                <p>Kết quả: <span id="value-rs9"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Chức năng 10: So sánh số lượng số âm, số dương</h3>
+
+            <form class="content">
+                <button type="submit" class="btn btn-outline-success" id="btn_b10">So sánh âm - dương</button>
+            </form>
+
+            <div class="result">
+                <p>Kết quả: <span id="value-rs10"></span></p>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"
+        integrity="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
