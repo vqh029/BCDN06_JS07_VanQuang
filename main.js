@@ -203,7 +203,6 @@ const btnSort = document.getElementById("btn_b07");
 function SortAsc(array) {
     var temp;
     var arrayTemp = [];
-    var arrayRs = [];
   
     if (array.length == 0) {
       return "Mảng rỗng";
@@ -214,14 +213,16 @@ function SortAsc(array) {
     }
 
     for (var i = 0; i < arrayTemp.length; i++){
-        for (var j = i + 1; j < arrayTemp.length; j++){
-            if(arrayTemp[i] > array[j]){
-                
+        for (var j = 0; j < arrayTemp.length - 1; j++){
+            if(arrayTemp[j] > arrayTemp[j + 1]){
+                temp = arrayTemp[j];
+                arrayTemp[j] = arrayTemp[j + 1];
+                arrayTemp[j + 1] = temp;
             }
         }
     }
 
-    return;
+    return arrayTemp;
   }
 
 btnSort.addEventListener("click", function (e) {
@@ -229,4 +230,43 @@ btnSort.addEventListener("click", function (e) {
 
   document.getElementById("value-rs7").innerHTML =
     "Mảng tăng dần = " + SortAsc(mangSoNguyen);
+});
+
+
+//Bai 010
+const btnCompare = document.getElementById("btn_b10");
+
+function CompareS(array) {
+    var negative = 0;
+    var positive = 0;
+  
+    if (array.length == 0) {
+      return "Mảng rỗng";
+    }
+
+    for (var i = 0; i < array.length; i++){
+        if(array[i] >= 0){
+          positive++;
+        }
+        else{
+          negative++;
+        }
+    }
+
+    if(positive > negative){
+      return "Số dương > Số âm";
+    }
+    else if(positive < negative){
+      return "Số dương < Số âm"
+    }
+    else{
+      return "Số dương = Số âm"
+    }
+  }
+
+  btnCompare.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  document.getElementById("value-rs10").innerHTML =
+    CompareS(mangSoNguyen);
 });
